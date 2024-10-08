@@ -8,37 +8,30 @@ from sklearn.pipeline import make_pipeline
 from sklearn.linear_model import LogisticRegression
 import joblib
 import random
-from preprocessing import preprocess  # Import preprocessing functions
+from preprocessing import preprocess
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-# Import knowledge base from main.py
 
-# Download NLTK resources
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
 
-# Load dataset
 current_dir = os.path.dirname(__file__)
 df = pd.read_csv(os.path.join(current_dir, 'chatbot_data.csv'))
 
-# Handle missing values
 df['Query'] = df['Query'].fillna('')
 df['Intent'] = df['Intent'].fillna('unknown')
 df['Response'] = df['Response'].fillna('No response')
 
-# Verify no missing values remain
 df.info()
 
-# Initialize NLTK utilities
 stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
-# Apply preprocessing to queries
+
 df['Processed_Query'] = df['Query'].apply(preprocess)
 
-# TF-IDF Vectorizer setup
 vectorizer = TfidfVectorizer(ngram_range=(1, 2))
 vectorizer.fit(df['Processed_Query'])
 
@@ -65,12 +58,9 @@ knowledge_base = {
 def rule_based_response(query):
     """Check for predefined responses from the knowledge base and return a single response."""
     query_lower = query.lower().strip()
-    
-    # Get the list of responses from the knowledge base
     responses = knowledge_base.get(query_lower)
     
     if responses:
-        # Randomly select one response from the list
         return random.choice(responses)
     
     return None
@@ -81,11 +71,9 @@ def ml_get_response(query):
     new_query_tfidf = vectorizer.transform(new_query_processed)
     existing_queries_tfidf = vectorizer.transform(df['Processed_Query'])
     
-    # Compute cosine similarity between new and existing queries
     similarity_scores = cosine_similarity(new_query_tfidf, existing_queries_tfidf)
     index = similarity_scores.argmax()
     
-    # Threshold for similarity to respond with default message if unclear
     if similarity_scores.max() < 0.1:
         return "I'm sorry, I don't understand that. You can ask about courses, admission, faculties, or accommodation at Sol Plaatje University."
     
@@ -94,28 +82,23 @@ def ml_get_response(query):
 def get_response(query):
     """Get chatbot response based on query type."""
     if isinstance(query, list):
-        query = query[0]  # Use first element if a list
+        query = query[0]
     
-    # Check for rule-based responses first
     simple_response = rule_based_response(query)
     if simple_response:
         return simple_response
     
-    # If no rule-based match, use ML model
     return ml_get_response(query)
 
 def get_chatbot_response(query):
     """Get response from the chatbot based on user input."""
     return get_response(query)  
 
-# Stratified K-Fold Cross-Validation
 def evaluate_model():
     accuracies = []
     
-    # Remove low-frequency classes
     df_filtered = df[df['Intent'].isin(df['Intent'].value_counts()[df['Intent'].value_counts() > 1].index)]
     
-    # Adjust n_splits for K-Fold
     n_splits = min(5, df_filtered['Intent'].value_counts().min())
     skf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=42)
 
@@ -126,12 +109,10 @@ def evaluate_model():
         X_train, X_test = df_filtered['Query'].iloc[train_index], df_filtered['Query'].iloc[test_index]
         y_train, y_test = df_filtered['Response'].iloc[train_index], df_filtered['Response'].iloc[test_index]
 
-        # Fit the model
         model_pipeline.fit(X_train, y_train)
 
         correct_predictions = 0
         
-        # Make predictions and calculate accuracy
         for test_query, expected_response in zip(X_test, y_test):
             predicted_response = get_response(test_query)
             
@@ -141,13 +122,11 @@ def evaluate_model():
         accuracy = correct_predictions / len(X_test)
         accuracies.append(accuracy)
 
-    # Output the average accuracy
     average_accuracy = np.mean(accuracies)
     print(f'Average accuracy: {average_accuracy * 100:.2f}%')
 
     return model_pipeline
 
-# Save and load model functionality
 def save_model(model_pipeline):
     joblib.dump(model_pipeline, os.path.join(current_dir, 'chatbot_model.pkl'))
 
@@ -156,6 +135,6 @@ def load_model():
 
 if __name__ == "__main__":
     model_pipeline = evaluate_model()
-# Uncomment below to train, evaluate, and save the model
+    
 # model_pipeline = evaluate_model()
-# save_model(model_pipeline)
+save_model(model_pipeline)
