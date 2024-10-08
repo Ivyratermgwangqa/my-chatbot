@@ -1,6 +1,0 @@
-User: What are capstone projects?
-Chatbot: I'm sorry, I don't understand that or please try putting question mark at the end of your query.
-
-User: what is Sol Plaatje University
-Chatbot: Sol Plaatje University is a public university located in Kimberley, Northern Cape, South Africa.
-
