@@ -101,7 +101,7 @@ Before running the application, ensure that you have the following installed:
    python app.py
    ```
 
-2. Open your web browser and navigate to `http://127.0.0.1:5000`.
+2. Open your web browser and navigate to `http://127.0.0.1:5000` or `http://172.24.246.132:5000`.
 
 3. Interact with the chatbot through the web interface!
 
