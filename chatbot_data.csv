@@ -1,0 +1,122 @@
+Query,Response,Intent
+"What are the admission requirements for computer science?","To be eligible for the BSc in Computer Science, you need a minimum of 60% in Mathematics and must meet the general university admission requirements.",Admissions
+"When is the application deadline for next year?","The application deadline for the next academic year is typically in September. Please check our website for the exact date.",Admissions
+"Can I apply online for undergraduate studies?","Yes, you can apply online through our official website. The online application portal is available for all undergraduate programs.",Admissions
+"What documents are required for admissions?","You will need to submit a certified copy of your ID, academic transcripts, and proof of payment for the application fee.",Admissions
+"What is the minimum grade to get into the university?","The minimum admission requirement is a National Senior Certificate (NSC) with at least 50% in English and 60% in the required subjects for your chosen field.",Admissions
+"How much is the tuition for a first-year student?","Tuition fees for first-year students vary by program, typically ranging from R30,000 to R50,000 per year.",Fees
+"Are there scholarships available for computer science students?","Yes, scholarships are available based on academic merit and financial need. You can apply through the Financial Aid Office.",Fees
+"What is the cost of accommodation per semester?","On-campus accommodation costs approximately R15,000 per semester, depending on the type of room and facilities.",Fees
+"Can I apply for financial aid?","Yes, financial aid is available for eligible students through NSFAS and other scholarship programs. Applications are done online.",Fees
+"How much are the application fees?","The non-refundable application fee is R100 for South African students and R300 for international students.",Fees
+"Does the university have on-campus accommodation?","Yes, Sol Plaatje University offers on-campus accommodation for students, but spaces are limited, so early application is encouraged.",Campus Life
+"Are there any student clubs and societies?","Yes, we have various student clubs and societies, including sports, arts, and academic groups. You can join during orientation week.",Campus Life
+"How do I get involved in student events?","Student events are advertised through the Student Affairs Office. Keep an eye on the events calendar and student portal for updates.",Campus Life
+"What is the best way to find off-campus housing?","You can find off-campus housing through the university’s Off-Campus Accommodation Office, which provides a list of approved landlords.",Campus Life
+"Is there a gym or fitness center on campus?","Yes, the university has a gym facility that is available to all students. Membership is included in your registration fees.",Campus Life
+"What undergraduate programs are offered?","We offer a range of undergraduate programs in fields such as Education, Humanities, Social Sciences, and Natural and Applied Sciences.",Courses
+"Does the university offer part-time study options?","Yes, some programs allow for part-time study. You can contact the specific department to confirm availability for your course of interest.",Courses
+"How do I register for courses online?","Course registration is done through the university’s online student portal. Detailed instructions will be provided after admission.",Courses
+"What is the duration of the computer science program?","The BSc in Computer Science is a 3-year program if completed full-time. Part-time options may extend this duration.",Courses
+"Are there any postgraduate programs available?","Yes, we offer postgraduate programs in various fields, including Honours and Master’s degrees. You can view the full list on our website.",Courses
+"How do I contact the admissions office?","You can contact the Admissions Office via email at admissions@spu.ac.za or call +27 53 491 0000.",Contact Information
+"What is the phone number for the finance department?","The Finance Department can be reached at +27 53 491 0123 or via email at finance@spu.ac.za.",Contact Information
+"Where can I find the registrar’s office?","The Registrar's Office is located in Building C on the Main Campus. You can also contact them via registrar@spu.ac.za.",Contact Information
+"How do I get in touch with the student housing office?","The Student Housing Office can be contacted at +27 53 491 0105 or housing@spu.ac.za.",Contact Information
+"Is there a helpline for international students?","Yes, international students can contact the International Office at international@spu.ac.za or call +27 53 491 0111.",Contact Information
+"When was Sol Plaatje University established?","Sol Plaatje University was established in 2014 as one of the first new universities launched in South Africa since 1994.",General Information
+"Where is the main campus located?","The main campus is located in Kimberley, Northern Cape. The address is Chapel Street, Kimberley, 8301.",General Information
+"How do I access the library?","The library is accessible to all registered students. You can use your student card to gain entry and access library resources online via the student portal.",General Information
+"What are the university's core values?","Sol Plaatje University's core values include excellence, inclusivity, innovation, and social responsibility, guiding our teaching, research, and engagement.",General Information
+"What facilities are available at the university?","The university offers a variety of facilities, including lecture halls, a library, student residences, computer labs, sports grounds, and a gym.",General Information
+"What are the orientation dates for new students?","Orientation for new students typically takes place in late January. Please check the university's website for the exact dates.",Campus Life
+"Are there any career services available for students?","Yes, the university offers career services to assist students with job placements, internships, and resume writing workshops.",Campus Life
+"How can I access mental health support services?","Mental health support services are available through the Student Wellness Center. You can schedule an appointment by visiting their office or calling them.",Campus Life
+"What is the process for changing my major?","To change your major, you need to submit a formal request to the Registrar’s Office and meet with an academic advisor to discuss your options.",Courses
+"Are there opportunities for research as an undergraduate student?","Yes, undergraduate students can participate in research projects with faculty members. Check with your department for available opportunities.",Courses
+"What kind of extracurricular activities can I join?","The university offers a wide range of extracurricular activities, including sports teams, academic clubs, and cultural societies. You can find more information on the student portal.",Campus Life
+"Is there a bookstore on campus?","Yes, there is a campus bookstore where you can purchase textbooks, supplies, and university merchandise.",General Information
+"How do I apply for residence on campus?","To apply for residence, you need to complete the housing application form available on the university’s website after you have been accepted.",Campus Life
+"What are the library hours during exam periods?","During exam periods, the library extends its hours to accommodate students. Check the library’s website for specific hours.",General Information
+"What support does the university offer for international students?","The International Office provides various support services, including visa assistance, orientation programs, and cultural integration activities.",Contact Information
+"How can I find internship opportunities?","Internship opportunities are posted on the university’s career services portal. You can also reach out to your department for specific leads.",Courses
+"What safety measures are in place on campus?","The university has a dedicated security team and offers safety escorts for students at night. Emergency contacts are also posted throughout campus.",Campus Life
+"Are there any language support programs available?","Yes, the university offers language support programs for students who need assistance with English language skills.",Courses
+"Can I switch from full-time to part-time studies?","Yes, you can request to switch from full-time to part-time studies by contacting your department and completing the necessary paperwork.",Courses
+"How can I get a student ID card?","You can obtain a student ID card by visiting the Student Affairs Office with your proof of registration and identification.",Contact Information
+"Is there a campus health clinic?","Yes, there is a campus health clinic that provides medical services to students. You can visit the clinic for general health concerns.",General Information
+"What is the university’s policy on academic integrity?","The university has a strict policy on academic integrity, which includes guidelines on plagiarism and cheating. Please refer to the student handbook for details.",General Information
+"How do I participate in student government?","Students can participate in student government by running for election during the annual student council elections. Information is available on the student portal.",Campus Life
+"What should I do if I miss a class?","If you miss a class, it's important to contact your lecturer as soon as possible to catch up on missed work and assignments.",Courses
+"How can I access online course materials?","Online course materials can be accessed through the university's learning management system (LMS). Log in with your student credentials.",Courses
+"Are there any mentorship programs available?","Yes, the university offers mentorship programs where students can connect with faculty or industry professionals for guidance and support.",Campus Life
+"What recreational facilities are available on campus?","The university has various recreational facilities, including sports fields, a gym, and areas for student relaxation and socialization.",Campus Life
+"How do I apply for a study abroad program?","To apply for a study abroad program, check with the International Office for application procedures and available partner universities.",Courses
+"Are there any support services for students with disabilities?","Yes, the university provides support services for students with disabilities, including accommodations and specialized resources.",Contact Information
+"What is Sol Plaatje University?","Sol Plaatje University is a public university located in Kimberley, Northern Cape, South Africa.",General Information
+"When was Sol Plaatje University established?","Sol Plaatje University was established in 2014.",General Information
+"What is the motto of the university?","The motto is 'Truth; Justice; Excellence'.",General Information
+"What is the vision of the university?","To empower students through access to quality education and innovation.",General Information
+"What is the mission of the university?","To provide an environment that promotes academic excellence, social responsibility, and personal growth.",General Information
+"What are the core values of the university?","Inclusivity, Excellence, Accountability, Integrity, and Collaboration.",General Information
+"What types of student support services are available?","Comprehensive support services including academic and personal counseling.",Support Services
+"What orientation programs are offered for new students?","Programs to help new students acclimate to university life.",Support Services
+"What health education programs are available?","Initiatives promoting wellness and healthy lifestyles.",Support Services
+"What peer mentoring programs are offered?","Upperclassmen mentoring first-year students for academic and social success.",Support Services
+"What tutoring services are available?","Individual and group tutoring available for various subjects.",Support Services
+"What writing assistance is provided?","Help with academic writing and thesis preparation available at writing centers.",Support Services
+"What financial literacy programs are available?","Workshops to help students manage personal finances and budgeting.",Support Services
+"When are career fairs held?","Regularly scheduled career fairs connecting students with potential employers.",Support Services
+"What internship preparation resources are offered?","Workshops and resources to assist students in securing internships.",Support Services
+"What professional development opportunities are available?","Programs designed to enhance students' employability and skills.",Support Services
+"What networking events are organized?","Opportunities for students to connect with industry professionals.",Support Services
+"What student advocacy services are provided?","Support for student rights and representation within the university.",Support Services
+"What crisis management support is available?","Resources available for students facing personal crises.",Support Services
+"What digital learning resources can students access?","Access to online tools and platforms for enhanced learning experiences.",Support Services
+"What student governance structures are in place?","Student representative councils active in decision-making processes.",Student Life
+"What student organizations can students join?","Various clubs and societies catering to diverse interests.",Student Life
+"What mental health support services are provided?","Counseling and support services for mental health issues.",Support Services
+"What academic advising services are available?","Personalized guidance for academic planning and course selection.",Support Services
+"What career counseling services are offered?","Assistance in career planning and job search strategies.",Support Services
+"What technology support is available?","Help with online learning platforms and technical issues.",Support Services
+"What community service learning opportunities are available?","Programs integrating community service with academic coursework.",Community Engagement
+"What sustainability initiatives are in place?","Programs focused on promoting sustainable practices on campus.",Campus Culture
+"What cultural exchange programs are offered?","Opportunities for students to engage with diverse cultures.",International
+"What diversity initiatives are promoted?","Programs promoting cultural awareness and sensitivity.",Campus Culture
+"What volunteer programs are available?","Opportunities for students to engage in community service.",Community Engagement
+"What research symposiums are conducted?","Events showcasing student and faculty research.",Research
+"What research opportunities can students explore?","Research assistant positions with faculty members.",Research
+"What research funding opportunities exist?","Grants available for student research projects.",Research
+"What faculty research grants are available?","Grants available for faculty to support research initiatives.",Research
+"What student-led research projects are encouraged?","Encouragement for students to undertake independent research.",Research
+"What industry partnerships does the university have?","Collaborations with local and international businesses for student projects.",Research
+"What entrepreneurship programs support student startups?","Programs supporting student entrepreneurs and startups.",Innovation
+"What innovation challenges are organized?","Competitions for students to pitch their business ideas.",Innovation
+"What creative arts initiatives are promoted?","Programs promoting the arts within the university community.",Campus Culture
+"What fitness and recreation programs are offered?","Organized fitness classes and recreational sports for students.",Student Life
+"What health and wellness events are conducted?","Workshops and seminars focused on mental and physical health.",Student Life
+"What study skills seminars are available?","Programs to enhance students’ study habits and academic performance.",Support Services
+"What international exchange opportunities exist?","Partnerships allowing students to study abroad for a semester.",International
+"What scholarship programs are available?","Various scholarships available for both local and international students.",Admissions
+"What continuing education programs are offered?","Opportunities for adults to further their education through flexible courses.",Programs
+"What undergraduate programs are available?","Bachelor of Arts (BA).",Undergraduate Courses
+"What undergraduate programs are offered?","Bachelor of Science (BSc).",Undergraduate Courses
+"What undergraduate programs does the university have?","Bachelor of Education (BEd).",Undergraduate Courses
+"What undergraduate programs can students choose from?","Bachelor of Commerce (BCom).",Undergraduate Courses
+"What postgraduate programs are available?","Master of Arts (MA).",Postgraduate Courses
+"What postgraduate programs are offered?","Master of Science (MSc).",Postgraduate Courses
+"What postgraduate programs does the university have?","Master of Education (MEd).",Postgraduate Courses
+"What postgraduate programs can students choose from?","MBA (Master of Business Administration).",Postgraduate Courses
+"What short courses are available?","Project Management.",Short Courses
+"What short courses are offered?","Data Science.",Short Courses
+"What short courses does the university have?","Digital Marketing.",Short Courses
+"What online programs are available?","Online Bachelor of Business Administration (BBA).",Online Courses
+"What online programs are offered?","Online Certificate in Data Analytics.",Online Courses
+"What continuing education opportunities exist?","Lifelong learning initiatives for working professionals.",Continuing Education
+"What interdisciplinary programs are available?","Environmental Science.",Interdisciplinary Courses
+"What interdisciplinary programs are offered?","Health Science.",Interdisciplinary Courses
+"What internships are available?","Internship programs offered in various fields.",Internships
+"What are capstone projects?","Final-year projects allowing students to apply knowledge.",Capstone Projects
+"What study abroad opportunities exist?","Opportunities to study at partner universities abroad.",Study Abroad
+"What student exchange programs are available?","Exchange programs with partner institutions worldwide.",Study Abroad
+"What campus events are organized?","Regularly organized events for student engagement and activities.",Student Life
