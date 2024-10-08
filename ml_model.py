@@ -137,4 +137,4 @@ if __name__ == "__main__":
     model_pipeline = evaluate_model()
     
 # model_pipeline = evaluate_model()
-save_model(model_pipeline)
+# save_model(model_pipeline)
