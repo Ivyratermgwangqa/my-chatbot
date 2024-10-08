@@ -8,7 +8,6 @@ import string
 import joblib
 import os
 from ml_model import load_model, get_response as ml_get_response
-# from model import load_model, get_response as ml_get_response
 from ml_model import knowledge_base
 from preprocessing import preprocess, get_synonyms
 
@@ -20,7 +19,6 @@ def extract_entities(tokens):
     entities = [token for token in tokens if token in knowledge_base]
     return entities
 
-# Define a pattern-matching function for detecting intents
 def pattern_matching(user_input):
     """
     Matches user input against pre-defined patterns to identify intent.
@@ -48,8 +46,6 @@ def pattern_matching(user_input):
             return key
     return None
 
-# Define the function to get a response based on user input
-
 def get_response(user_input, model=None):
     """
     Generate a response based on user input by using rule-based methods or an ML model if provided.
@@ -63,52 +59,41 @@ def get_response(user_input, model=None):
     str: The chatbot's response.
     """
 
-    # Normalize and preprocess user input
     normalized_input = user_input.lower().replace("sol plaatje university", "spu").replace("spu", "sol plaatje university")
     
-    # Preprocess user input using the imported preprocess function
     processed_input = preprocess(normalized_input)
     
-    # Get synonyms for the preprocessed input to enhance matching
     synonyms = get_synonyms(processed_input)
     
-    # Ensure that synonyms is a list (it might be a string or None)
     if isinstance(synonyms, str):
-        synonyms = [synonyms]  # Convert string to a list
+        synonyms = [synonyms]
     elif synonyms is None:
-        synonyms = []  # Handle the case where no synonyms are found
+        synonyms = []
 
-    # Combine the original query and its synonyms for better pattern matching
     expanded_input = [processed_input] + synonyms
     
-    # Extract named entities (if relevant for your application)
     entities = extract_entities(processed_input)
     if entities:
         print("Extracted Entities:", entities)
     
-    # Perform pattern matching for rule-based responses
     for query_variant in expanded_input:
         matched_entity = pattern_matching(query_variant)
         if matched_entity:
             return knowledge_base.get(matched_entity, ["I'm sorry, I don't understand that."])[0]
     
-    # If an ML model is provided, use it for generating responses
     if model:
-        return ml_get_response(user_input)  # Use the ML-based response system
+        return ml_get_response(user_input)
     
-    # Fallback response
     return "I'm sorry, I don't understand that. You can ask about courses, admission, faculties, or accommodation at Sol Plaatje University."
 
 
-# Load the saved machine learning model
 def load_ml_model():
     """Loads the trained machine learning model."""
     return load_model()
 
-# Chatbot conversation loop
 def chatbot():
     print("Chatbot: Hello! How can I assist you with university information today?")
-    model = load_ml_model()  # Load ML model
+    model = load_ml_model()
     
     while True:
         user_input = input("You: ")
@@ -120,6 +105,5 @@ def chatbot():
         response = get_response(user_input, model)
         print(f"Chatbot: {response}")
 
-# Run chatbot when script is executed directly
 if __name__ == "__main__":
     chatbot()
