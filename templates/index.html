@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot UI</title>
+  <link rel="stylesheet" href="static/style.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" />
+</head>
+
+<body class="show-chatbot">
+  <header>
+    <nav class="navbar">
+      <ul>
+        <ul>
+          <li><a href="https://www.spu.ac.za">Home</a></li>
+          <li><a href="https://www.spu.ac.za/about">About</a></li>
+          <li><a href="https://www.spu.ac.za/applications">Applications</a></li>
+          <li><a href="https://www.spu.ac.za/contact">Contacts</a></li>
+        </ul>
+
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content">
+    <h1>Welcome to Sol Plaatje University Chatbot</h1>
+    <p>
+      The SPU Chatbot is designed to assist students, faculty, and visitors of
+      Sol Plaatje University with information and guidance on
+      university-related topics. Whether it's about academic programs, campus
+      events, or administrative queries, the chatbot provides prompt, useful
+      responses. By integrating rule-based techniques and machine learning
+      enhancements, the chatbot can handle both simple and more complex
+      queries.
+    </p>
+  </div>
+
+  <button class="chatbot-toggler">
+    <span class="material-symbols-outlined" id="chat-icon">mode_comment</span>
+  </button>
+  <div class="chatbot" style="display: none">
+    <header>
+      <h2>Gemmies</h2>
+      <button id="cancel-btn" class="material-symbols-outlined">
+        cancel
+      </button>
+      <span class="material-symbols-outlined">close</span>
+    </header>
+
+    <ul class="chatbox"></ul>
+
+    <div class="chat-input">
+      <textarea placeholder="Enter a message..." required></textarea>
+      <span id="send-btn" class="material-symbols-outlined">send</span>
+    </div>
+  </div>
+
+  <script>
+    const toggler = document.querySelector(".chatbot-toggler");
+    const chatbot = document.querySelector(".chatbot");
+    const chatIcon = document.getElementById("chat-icon");
+    const chatInput = document.querySelector(".chat-input textarea");
+    const chatbox = document.querySelector(".chatbox");
+    const cancelBtn = document.getElementById("cancel-btn");
+
+    let firstTimeOpen = true;
+    let conversationActive = false;
+
+    const sendMessage = async (message) => {
+      const response = await fetch("/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message }),
+      });
+      const data = await response.json();
+      return data.response;
+    };
+
+    const addMessageToChatbox = (message, isBot = false) => {
+      if (isBot) {
+        chatbox.innerHTML += `<li class="chat incoming"><span class="material-symbols-outlined">smart_toy</span><p>${message}</p></li>`;
+      } else {
+        chatbox.innerHTML += `<li class="chat outgoing"><p>${message}</p></li>`;
+      }
+      chatbox.scrollTop = chatbox.scrollHeight;
+    };
+
+    const displayWelcomeMessage = () => {
+      const welcomeMessage =
+        "Greetings 👋! How may I assist you today regarding Sol Plaatje University?";
+      addMessageToChatbox(welcomeMessage, true);
+    };
+
+    toggler.addEventListener("click", () => {
+      const isChatbotVisible = chatbot.style.display === "block";
+      chatbot.style.display = isChatbotVisible ? "none" : "block";
+      chatIcon.textContent = isChatbotVisible ? "mode_comment" : "close";
+
+      if (!isChatbotVisible && (firstTimeOpen || !conversationActive)) {
+        displayWelcomeMessage();
+        firstTimeOpen = false;
+        conversationActive = true;
+      }
+    });
+
+    document
+      .getElementById("send-btn")
+      .addEventListener("click", async () => {
+        const userMessage = chatInput.value;
+        if (!userMessage) return;
+
+        addMessageToChatbox(userMessage);
+        chatInput.value = "";
+
+        const botResponse = await sendMessage(userMessage);
+
+        addMessageToChatbox(botResponse, true);
+      });
+
+    cancelBtn.addEventListener("click", () => {
+      chatbox.innerHTML = "";
+      conversationActive = false;
+    });
+  </script>
+</body>
+
+</html>
