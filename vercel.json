@@ -11,5 +11,11 @@
             "src": "/(.*)",
             "dest": "app.py"
         }
-    ]
+    ],
+    "build": {
+        "env": {
+            "PIP_NO_BINARY": "pandas",
+            "PIP_ONLY_BINARY": ":none:"
+        }
+    }
 }
